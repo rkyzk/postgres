@@ -47,6 +47,22 @@ session = Session()
 base.metadata.create_all(db) 
 
 # Q1
-artists = session.query(Artist)
-for artist in artists:
-    print(artist.ArtistId, artist.Name, sep=" | ")
+# artists = session.query(Artist)
+# for artist in artists:
+#    print(artist.ArtistId, artist.Name, sep=" | ")
+
+
+# Q2
+# artists = session.query(Artist)
+# for artist in artists:
+#    print(artist.Name)
+ 
+ 
+# Q3
+# artist = session.query(Artist).filter_by(Name="Queen").first()
+# print(artist.ArtistId, artist.Name, sep=" | ")
+
+
+# Q4
+artist = session.query(Artist).filter_by(ArtistId=51).first()
+print(artist.ArtistId, artist.Name, sep=" | ")
